@@ -1,6 +1,8 @@
 {
   "name": "youtube-disney-clone",
   "version": "0.1.0",
+  "homepage": "https://kishoredevworks.github.io/Disney-Plus-Clone-App",
+
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
@@ -23,9 +25,11 @@
   },
   "scripts": {
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.2.0"
   }
 }
